@@ -2,10 +2,10 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            steps { sh 'pip install pytest' }
+            steps { bat 'pip install pytest' }
         }
         stage('Test') {
-            steps { sh 'pytest' }
+            steps { bat 'pytest' }
         }
     }
 }
